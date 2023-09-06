@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "fa8c7862-bc03-428e-9312-dff44444f068",
+		"name": "Practical Test2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9280729"
+	},
+	"item": [
+		{
+			"name": "All users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/users",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/users/5",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/user/search?nameOrEmail=rank&maxAge=22&city=Pu",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"user",
+						"search"
+					],
+					"query": [
+						{
+							"key": "nameOrEmail",
+							"value": "rank"
+						},
+						{
+							"key": "maxAge",
+							"value": "22"
+						},
+						{
+							"key": "city",
+							"value": "Pu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Krank\",\r\n    \"lastName\": \"Kahar\",\r\n    \"email\": \"Krank@gmail.com\",\r\n    \"mobileNumber\": 6234568794,\r\n    \"birthdate\": \"2001-02-27\",\r\n    \"addresses\": [\r\n        // {\r\n        //     \"addressLine1\": \"1234 Main Street\",\r\n        //     \"pincode\": 123456,\r\n        //     \"city\": \"Pune\",\r\n        //     \"state\": \"NY\",\r\n        //     \"type\": \"Home\"\r\n        // },\r\n        {\r\n            \"addressLine1\": \"456 Elm Street\",\r\n            \"addressLine2\": \"Apt 2B\",\r\n            \"pincode\": \"54321\",\r\n            \"city\": \"Pune\",\r\n            \"state\": \"CA\",\r\n            \"type\": \"Office\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/users",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Vishal K\",\r\n    \"lastName\": \"Kahar K\",\r\n    \"email\": \"v3@gmail.com\",\r\n    \"mobileNumber\": 1234568793,\r\n    \"birthdate\": \"2000-02-27\",\r\n    \"addresses\": [\r\n        {\r\n            \"addressLine1\": \"1234 Main Street\",\r\n            \"addressLine2\": \"Apt 1234\",\r\n            \"pincode\": 12345,\r\n            \"city\": \"New York 2\",\r\n            \"state\": \"NY\",\r\n            \"type\": \"Home\"\r\n        },\r\n        {\r\n            \"addressLine1\": \"4567 Elm Street\",\r\n            \"addressLine2\": \"Apt 2B\",\r\n            \"pincode\": \"54321\",\r\n            \"city\": \"Los Angeles 2\",\r\n            \"state\": \"CA\",\r\n            \"type\": \"Office\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/users/5",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/users/7",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"users",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		}
+	]
+}
